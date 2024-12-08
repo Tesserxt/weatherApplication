@@ -82,8 +82,8 @@ public class weatherServlet extends HttpServlet {
 		long dateTimeStamp = jsonObject.get("dt").getAsLong() * 1000;
 		String date = new Date(dateTimeStamp).toString();
 		
-		double tempratureKelvin = jsonObject.getAsJsonObject("main").get("temp").getAsDouble();
-		int tempratureCelsius =  (int) (tempratureKelvin - 273.15);
+		double temperatureKelvin = jsonObject.getAsJsonObject("main").get("temp").getAsDouble();
+		int temperatureCelsius =  (int) (temperatureKelvin - 273.15);
 		
 		int humidity = jsonObject.getAsJsonObject("main").get("humidity").getAsInt();
 		
@@ -93,7 +93,7 @@ public class weatherServlet extends HttpServlet {
 		
 		request.setAttribute("date", date);
 		request.setAttribute("city", city);
-		request.setAttribute("temprature",tempratureCelsius);
+		request.setAttribute("temperature",temperatureCelsius);
 		request.setAttribute("humidity", humidity);
 		request.setAttribute("windSpeed", windSpeed);
 		request.setAttribute("weatherCondition", weatherCondition);
