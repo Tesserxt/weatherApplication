@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-<meta charset="UTF-8">
-<title>weatherApplication</title>
+  <meta charset="UTF-8">
+  <title>WeatherCast</title>
+  <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-<h1>Weather App</h1>
-<form action="weatherServlet" method="post">
-	<input name="city"></input>
-	<button>Submit</button>
-</form>
+ 
+<div class="container">
+
+  <header>
+    <h2><a href="#"><i class="ion-thermometer"></i> WeatherCast</a></h2>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" rel="noopener noreferrer">HTML/CSS</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" rel="noopener noreferrer">Js</a>
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" rel="noopener noreferrer">Java</a>
+        </li>
+        <li>
+          <a href="https://www.oracle.com/java/technologies/jspt.html" rel="noopener noreferrer">JSP</a>
+        <li>
+          <a href='https://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html' rel="noopener noreferrer">Servlets</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="cover">
+    <h1>Discover the weather out there.</h1>
+
+    <form  class="flex-form" action="weatherServlet" method="post">
+      <label for="from">
+        <i class="ion-location"></i>
+      </label>
+      <input type="search" placeholder="Where do you want to go?" name="city">
+      <input type="submit" value="Search">
+    </form>
+
+    <div id="madeby">
+      <span>
+        By <a href="https://github.com/tesserxt" target="_blank">@tesserxt</a>
+      </span>
+    </div>
+  </div>
+</div>
+  
 </body>
 </html>
